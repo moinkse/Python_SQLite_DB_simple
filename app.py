@@ -32,7 +32,7 @@ def menu():
 def prompt_add_new_bean(connection):
     name = input("Enter bean name: ")
     method = input("Enter how you should prepare it: ")
-    rating = int(input("Enter your rating score (0-100"))
+    rating = int(input("Enter your rating score (0-100)"))
 
     database.add_bean(connection, name, method, rating)
 
@@ -57,3 +57,5 @@ def prompt_find_best_method(connection):
     best_method = database.get_best_preparation_for_bean(connection, name)
 
     print(f"The best preparation method for {name} is: {best_method[2]}")
+
+menu()
